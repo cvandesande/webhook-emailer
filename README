@@ -1,0 +1,9 @@
+
+Create Webhook in mailgun UI
+
+docker pull python:3.9-slim
+docker build . -t registry.opendmz.com/yul-webhooks
+docker push registry.opendmz.com/yul-webhooks:latest
+
+Test it:
+curl -d @mg.json -H "Content-Type: application/json" -X POST https://api.opendmz.com/notify
