@@ -2,8 +2,7 @@
 Create Webhook in mailgun UI
 
 docker pull python:3.9-slim
-docker build . -t registry.opendmz.com/yul-webhooks
-docker push registry.opendmz.com/yul-webhooks:latest
-
+docker build . -t webhook-emailer
+docker push webhook-emailer
 Test it:
-curl -d @mg.json -H "Content-Type: application/json" -X POST https://api.opendmz.com/notify
+curl -d @mg.json -H "Content-Type: application/json" -X POST https://webhook-emailer.example.com

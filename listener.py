@@ -64,7 +64,7 @@ def sendmsg(mail_sender, mail_recipient, mail_subj, mail_severity, mail_status):
         + mail_status \
         + '\n' \
         + 'This is a permanent failure, please check the email ' \
-        + 'address or contact postmaster@opendmz.com.'
+        + 'address or contact postmaster@example.com.'
     elif mail_severity == 'temporary':
         mail_msg = mail_header \
         + 'Delayed delivery to: ' \
